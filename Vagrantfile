@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-	 config.vm.define "box1" do |box1|
+	 config.vm.define "box98" do |box1|
 
          box1.vm.box="ubuntu/trusty64"
 
@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
          box2.vm.box="scotch/box"
 
-         box2.vm.network :forwarded_port, guest: 22, host: 10222, id: "ssh"
+         box2.vm.networketh0 :forwarded_port, guest: 22, host: 10222, id: "rdp"
  end
 end
 
